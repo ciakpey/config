@@ -1,4 +1,4 @@
-#!javascript
+## remplacé dans dwb keys#!javascript
 
  
 bind("ee", function() {

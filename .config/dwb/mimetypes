@@ -1,8 +1,11 @@
-application/postscript evince
-application/x-bittorrent transmission-gtk
 application/download evince
-application/force-download evince
 application/x-download evince
+application/x-bittorrent transmission-gtk
+application/postscript evince
+applicaton/octet-stream evince
+audio/x-mpegurl vlc
+application/octet-stream evince
+application/force-download evince
 application/zip evince
-application/octet-stream subl
+application/x-forcedownload evince
 application/pdf evince

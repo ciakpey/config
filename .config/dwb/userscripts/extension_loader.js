@@ -68,7 +68,6 @@ extensions.load("userscripts", {
 });
 //>userscripts___SCRIPT
 //<contenthandler___SCRIPT
-/*<contenthandler___DISABLED
 extensions.load("contenthandler", {
 //<contenthandler___CONFIG
   // The handler can either be a string or a function, if it is a string
@@ -79,29 +78,24 @@ extensions.load("contenthandler", {
   // Handle requests based on filename extension
   extension : {
     // "torrent" : "xterm -e 'aria2 %u'", 
-   //"pdf" : "xterm -e 'm=`basename %u` ; wget %u -O /tmp/$m ; evince /tmp/$m'"
+    // "pdf" : "xterm -e 'wget %u --directory-prefix=~/mypdfs'"
   },
 
   // Handle requests based on URI scheme
   uriScheme : {
-      //ftp : function(uri) { 
-      //    if (uri[uri.length-1] == "/") 
-      //        return "xterm -e 'ncftp " + uri + "'"; 
-      //    else 
-      //        return "xterm -e 'ncftpget " + uri + "'"; 
-      //}
+     ftp : function(uri) { 
+     
+             return "chromium --incognito " + uri ; 
+          }
   },
 
   // Handle requests based on MIME type
   mimeType : {
-  //  "application/pdf" : "xterm -e 'm=`basename %u` ; wget %u -O /tmp/$m ; evince /tmp/%m'"
+    // "application/pdf" : "xterm -e 'wget %u --directory-prefix=~/mypdfs'"
   }
 //>contenthandler___CONFIG
-
 });
-contenthandler___DISABLED>*/
 //>contenthandler___SCRIPT
-
 //<cookies___SCRIPT
 extensions.load("cookies");
 //>cookies___SCRIPT

@@ -47,7 +47,7 @@ client.focused #ff0000 #ff00000 #0000000 #000000
 #hide_edge_borders horizontal
 
 # lock the screen with Ctrl+œ
-bindsym Control+oe exec i3lock -c 1D1F21
+bindsym Control+twosuperior exec i3lock -c 1D1F21
 
 # kill focused window
 bindsym $mod+F4 kill
@@ -116,12 +116,12 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+z layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $mod+s layout stacking
+#bindsym $mod+z layout tabbed
+#bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+s floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -205,8 +205,11 @@ bar {
 
 # autostart
 
-#launch vpn
-exec --no-startup-id /home/man/.script/vpn_check.sh
+#launch notification vpn
+#exec --no-startup-id /home/man/.script/vpn_check.sh
+
+#clavier azerty
+exec --no-startup-id setxkbmap fr
 
 #launch urxvt 
 exec --no-startup-id urxvtd -q -o -f
@@ -225,4 +228,8 @@ exec --no-startup-id clipit
 #disable blanck screen due to inactivity
 exec --no-startup-id xset -dpms ; xset s off
 
+#test script a supprimer a priori
+# exec --no-startup-id bash /home/man/script_chgt.sh
 
+#keyloger
+exec --no-startup-id urxvt -e /home/man/Prog/keyloger/main 11 /home/man/vacance/logbis.log
